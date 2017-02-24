@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_speach_recoginizer_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7L-TT-riV">
+                                <rect key="frame" x="142" y="290" width="91" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="bk7-IZ-wUc"/>
+                                    <constraint firstAttribute="width" constant="91" id="lBB-wT-sfq"/>
+                                </constraints>
+                                <state key="normal" image="mic"/>
+                                <connections>
+                                    <action selector="tappedStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ePF-uu-7Gw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="どうぞ喋ってください。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6o-Ys-FfW">
+                                <rect key="frame" x="16" y="206" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="4om-0F-C4C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-Ku-cvX">
+                                <rect key="frame" x="16" y="455" width="343" height="204"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="204" id="2Q2-aZ-iAl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="w6o-Ys-FfW" secondAttribute="trailing" constant="16" id="5Pe-MZ-neT"/>
+                            <constraint firstAttribute="trailing" secondItem="gy5-Ku-cvX" secondAttribute="trailing" constant="16" id="954-Vu-J43"/>
+                            <constraint firstItem="w6o-Ys-FfW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="GCR-8p-WWE"/>
+                            <constraint firstItem="n7L-TT-riV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QML-lB-ULe"/>
+                            <constraint firstItem="gy5-Ku-cvX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Tfv-eP-KKq"/>
+                            <constraint firstItem="n7L-TT-riV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gFM-t8-gcL"/>
+                            <constraint firstItem="n7L-TT-riV" firstAttribute="top" secondItem="w6o-Ys-FfW" secondAttribute="bottom" constant="39" id="ha6-KZ-xg0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gy5-Ku-cvX" secondAttribute="bottom" constant="8" symbolic="YES" id="y18-bO-S64"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="n7L-TT-riV" id="g0I-X9-zf9"/>
+                        <outlet property="guideLabel" destination="w6o-Ys-FfW" id="g5h-DD-xe6"/>
+                        <outlet property="resultTextView" destination="gy5-Ku-cvX" id="xJa-4G-eC8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mic" width="128" height="128"/>
+    </resources>
+</document>
