@@ -1,5 +1,5 @@
 //
-//  SpeachUtil.swift
+//  SpeechUtil.swift
 //  ios-speach-recoginizer-demo
 //
 //  Created by Kushida　Eiji on 2017/02/24.
@@ -9,15 +9,15 @@
 import Foundation
 import Speech
 
-protocol SpeachResultDelegate {
+protocol SpeechResultDelegate {
     func setButtonStatus(isEnabled: Bool)
     func setGuideMessage(message: String)
     func setResult(result: String)
 }
 
-final class SpeachUtil: NSObject {
+final class SpeechUtil: NSObject {
     
-    var delegate: SpeachResultDelegate?
+    var delegate: SpeechResultDelegate?
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))!
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -177,7 +177,7 @@ final class SpeachUtil: NSObject {
 }
 
 //MARK:- SFSpeechRecognizerDelegate
-extension SpeachUtil: SFSpeechRecognizerDelegate {
+extension SpeechUtil: SFSpeechRecognizerDelegate {
     
     /// 音声認識の可否が変更したときに呼ばれる
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer,
