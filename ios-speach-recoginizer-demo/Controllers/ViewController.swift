@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var guideLabel: UILabel!    
     @IBOutlet weak var resultTextView: UITextView!
     
-    let speech = SpeachUtil()
+    let speech = SpeechUtil()
             
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +37,8 @@ class ViewController: UIViewController {
     }
 }
 
-//MARK:- SpeachResultDelegate
-extension ViewController: SpeachResultDelegate {
+//MARK:- SpeechResultDelegate
+extension ViewController: SpeechResultDelegate {
     
     func setButtonStatus(isEnabled: Bool) {
         self.button.isEnabled = isEnabled
